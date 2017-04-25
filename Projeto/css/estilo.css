@@ -1,3 +1,81 @@
 body{
-	background-color: lightblue; 
+	background: url(imagens/WhatsApp-Hintergrund1.png); 
 }
+.audiowide{font-family: 'Audiowide';}
+
+.panel_default{border: 1px solid #FFFFFF;height: 600px;width: 400px;}
+
+.opacity-nav{background-color: rgba(0,0,0,0.7); }
+
+h1{font-family: 'Audiowide'; display: inline; color: #72bb53;}
+h2{ font-family: 'Audiowide'; display: inline; color: #ff0000;}
+.logo{margin-top: 2px;}
+.botao-sign{ font-family: 'Bangers'; color: white; background: #b02a2a; margin-top: 7px; border-radius: 15px;}
+.box-apresentacao{ background-image: url("imagens/WhatsApp-Hintergrund1.png") }
+
+
+/** Eventos index **/
+
+.eventos-index{
+    background-color: #f5fafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+}
+.eventos-index img {
+    margin:10px;
+}
+
+/** FIM eventos index **/
+
+#sobre-nos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fdd000;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    align-items: center;
+    
+}
+
+#sobre-nos h2{
+    color: #006afb;
+}
+
+
+/**** Footer ****/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    color: #4b4b4b;
+    background-color: #363636;
+}
+
+.redesocial{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 70px;
+}
+footer a img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    opacity: 0.3;
+    transition: 0.5s;
+    
+}
+footer a img:hover{
+    height:40px;
+    opacity: 1.0;
+}
+/* FIM Footer */
