@@ -1,0 +1,17 @@
+body{
+	background: #ccc; 
+}
+.audiowide{font-family: 'Audiowide';}
+
+.panel_default{
+	border: 1px solid #FFFFFF;
+	height: 600px;
+	width: 400px;
+}
+
+.opacity-nav{background-color: rgba(0,0,0,0.7); }
+
+.logo h1{display: inline; color: #72bb53;}
+.logo h2{display: inline; color: #ff0000;}
+.logo{margin-top: 2px;}
+.botao-sign{ font-family: 'Bangers'; color: white; background: #b02a2a; margin-top: 7px; border-radius: 15px;}
