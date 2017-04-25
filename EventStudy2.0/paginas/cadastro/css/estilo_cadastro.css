@@ -1,0 +1,31 @@
+body{
+	background: #E7F2F8;
+
+
+}
+body h1{
+	color: black;
+}
+
+.area_login{
+	position: relative;
+	left: 25%;
+	border:  1px solid white;
+	border-radius: 20px;
+	height: 400px;
+	width: 600px;
+	background: white;
+
+}
+
+.cadastro{
+	position: relative;
+	top: 20%;
+	left: 10%;
+	border:  1px solid white;
+	border-radius: 20px;
+	height: 300px;
+	width: 400px;
+	background: white;
+
+}
