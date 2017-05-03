@@ -1,0 +1,136 @@
+/* AZUL CLARO = #43d3e8   */
+/* LARANJA = #f96232  */
+/* AZUL ESCURO = #242d3c */
+
+
+body {
+	padding:0;
+	margin: 0;
+}
+
+/* HEADER */
+
+.cabecalho {
+	width: 100%;
+	height: 450px;
+	background-image: url(../imagens/mulher-pensativa-bkground.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right;
+	
+}
+
+
+/* OFERECEMOS */
+
+.oferecemos {
+	padding: 70px 0 50px;
+	width: 100%;
+	height: auto;
+	background-color: #43d3e8;
+	color: #242d3c;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	text-align: center;
+	align-items: center;
+}
+
+.teste {
+	margin: 20px;
+	display: flex;
+	flex-direction: coluwn;
+	justify-content: center;
+	
+}
+
+.motivos {
+	width: 100%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	text-align: center;
+	align-items: center;
+	background-color: #f96232;
+	padding-bottom: 50px;
+	
+}
+
+.MotivosImagens {
+	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: center;
+	align-items: center;
+	width: 150px;
+	height: 300px;
+	margin-top: 30px;
+	margin-right: -10px;
+	margin-left: 0px;
+}
+
+.imgMotivo{
+	margin-top: 20px;
+	width: 70px;
+	height: 70px;
+	background-color: #FFF;
+	border-radius: 50%;
+}
+
+
+.MotivosImagens img {
+	height: 50px;
+	margin: 10px;
+}
+
+.MotivosImagens  h3 {
+	height: 70px;
+	font-size: 15pt;
+}
+
+.MotivosImagens p {
+	margin-top: 10px;
+	
+}
+
+
+/* MEDIA QUERY PARA MAIORES QUE 798px*/
+@media only screen and (min-width: 798px){
+	
+}
+
+
+/* MEDIA QUERY PARA MAIORES QUE 1000px */
+
+@media only screen and (min-width: 1000px){
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

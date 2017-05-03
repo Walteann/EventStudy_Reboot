@@ -14,10 +14,18 @@ h2{ font-family: 'Audiowide'; display: inline; color: #ff0000;}
 .box-apresentacao{ background-image: url("imagens/WhatsApp-Hintergrund1.png") }
 
 
+/** Primeira sessão */
+
+
+
+/* Fim primeira sessão **/
+
+
+
 /** Eventos index **/
 
 .eventos-index{
-    background-color: #f5fafa;
+    background-color: #feebd0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -54,7 +62,7 @@ footer {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    color: #4b4b4b;
+    color: #a6aaad;
     background-color: #363636;
 }
 
@@ -72,6 +80,7 @@ footer a img {
     height: 40px;
     opacity: 0.3;
     transition: 0.5s;
+    margin:2px;
     
 }
 footer a img:hover{
@@ -79,3 +88,10 @@ footer a img:hover{
     opacity: 1.0;
 }
 /* FIM Footer */
+
+
+/* MEDIA QUERY PARA TABLETE */
+
+@media all query (max-width:763px){
+    
+}
