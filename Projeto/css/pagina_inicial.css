@@ -37,9 +37,9 @@ body {
 }
 
 .teste {
-	margin: 20px;
+	
 	display: flex;
-	flex-direction: coluwn;
+	flex-direction:column;
 	justify-content: center;
 	
 }
