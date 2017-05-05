@@ -12,8 +12,18 @@ h2{ font-family: 'Audiowide'; display: inline; color: #ff0000;}
 .logo{margin-top: 2px;}
 .botao-sign{ font-family: 'Bangers'; color: white; background: #b02a2a; margin-top: 7px; border-radius: 15px;}
 .box-apresentacao{ background-image: url("imagens/WhatsApp-Hintergrund1.png") }
-
-
+/*** menu **/
+#menu{ 
+ float: right;
+ margin-right: 35px;
+ position: relative;
+  display: none;
+  list-style-type: none;
+}
+#menu>li{
+padding-bottom:8px;
+}
+/*** fim do menu **/
 /** Primeira sessão */
 
 

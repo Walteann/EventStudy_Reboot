@@ -38,12 +38,19 @@
           </div> 
 
           <div class="col-md-2 col-lg-2 ">
-            <button class="btn botao-sign pull-right">Sign in</button>
+            <button id="sign-in" class="btn botao-sign pull-right">Sign in</button>
           </div>
 
         </div><!--row-->  
       </div><!--container-->
     </nav><!--nav-->
+    <ul id="menu"> <!-- Menu com os icones de redes sociais -->
+		<li><img src="./imagens/icones/google_icon.png" alt=""></li> 
+		<li><img src="./imagens/icones/fb.png" alt=""></li>
+		<li><img src="./imagens/icones/linkedin.png" alt=""></li>
+		<li><img src="./imagens/icones/twitter.png" alt=""></li>
+    </ul><!-- fim do menu -->
+    
 
     <section class="primeira-sessao">
             <div class="container-fluid box-apresentacao">
@@ -121,10 +128,19 @@
           <p>&copy Todos os direitos reservados</p>
       </footer>
       
+      <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script> <!-- CDN Jquery -->
+      <script> 
+        	$(document).ready(function(){  // Aguarda o DOM ser carregado
+      			
+	      		$("#sign-in").click(function(){ // Se houver click no botão "Sign-in"
+						$("#menu").toggle()		// mostra/esconde o menu
+						}); 
+						
+			   	});
+      </script>
       
-      
-      
-
+           
+	<script> src="./js/arquivo.js"</script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
