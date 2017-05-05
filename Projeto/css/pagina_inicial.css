@@ -6,6 +6,7 @@
 body {
 	padding:0;
 	margin: 0;
+	overflow-x: hidden;
 }
 
 /* HEADER */
@@ -17,7 +18,28 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: right;
+	text-align: center;
 	
+}
+
+.cabecalho h1 {
+	width: 250px;
+	font-family: "Bad Script",Arial,sans-serif;
+	font-size: 30pt;
+	margin: 0 auto;
+	margin-top: 200px	
+}
+
+.cabecalho h5 {
+	font-family: "Open Sans",Arial,sans-serif;
+	font-size: 10pt;
+	margin: 0;
+}
+
+.botao-cabecalho {
+	margin: 30px;
+	height: 50px;
+	width: 200px
 }
 
 
@@ -46,60 +68,139 @@ body {
 
 .motivos {
 	width: 100%;
-	height: auto;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	text-align: center;
-	align-items: center;
 	background-color: #f96232;
+	padding-top: 50px;
 	padding-bottom: 50px;
 	
+	
 }
 
-.MotivosImagens {
-	
+.EventMotivo {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
 	justify-content: space-around;
+	flex-wrap: wrap;
 	text-align: center;
-	align-items: center;
-	width: 150px;
+}
+
+.EventCol {
 	height: 300px;
+	width: 150px;
 	margin-top: 30px;
-	margin-right: -10px;
-	margin-left: 0px;
 }
 
-.imgMotivo{
-	margin-top: 20px;
-	width: 70px;
-	height: 70px;
-	background-color: #FFF;
-	border-radius: 50%;
-}
-
-
-.MotivosImagens img {
-	height: 50px;
-	margin: 10px;
-}
-
-.MotivosImagens  h3 {
-	height: 70px;
-	font-size: 15pt;
-}
-
-.MotivosImagens p {
-	margin-top: 10px;
+.motivos img {
+	height: 60px;
+	margin: 15px 0 15px 0;
+	margin-top: 15px;
 	
+}
+
+.imgMotivo {
+	height: 90px;
+	width: 90px;
+	background-color: #fff;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+.EventCol h3 {
+	text-transform: uppercase;
+	font-family: "Nunito",Arial,sans-serif;
+	font-weight: 700;
+	font-size: 12pt;
+	margin-bottom: 2px;
+	
+}
+
+.EventCol p {
+	font-family: "Roboto",Arial,sans-serif;
+	font-weight: 200;
+}
+
+
+/** PRE RODAPE **/
+
+.pre-rodape {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 10px;
+	background-color: #464646;
+	text-align: center;
+		
+}
+
+.pRodape {
+	margin-top: 30px;
+	margin-bottom: 15pt;
+}
+.pre-rodape a {
+	text-decoration: none;
+	color: #d2d2d2;
+	font-family: "Roboto",Arial,sans-serif;
+	text-transform: uppercase;
+	font-size: 12pt;
+	transition: 0.5s;
+}
+
+.pre-rodape a:hover {
+	
+	color: #43d3e8;
+}
+
+.rodape {
+	margin-top: 0px;
+	text-align: center;
+	background-color: #464646;
+}
+
+
+.redesocial{
+    display: flex;
+    flex-direction: row;
+	justify-content: center;
+    align-items: center;
+    height: 70px;
+	margin-bottom: -10px;
+
+}
+
+.rodape h6 {
+	font-family: "Nunito",Arial,sans-serif;
+	color: #d2d2d2;
+}
+footer a img {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    opacity: 0.5;
+    transition: 0.5s;
+    margin:2px;
+    
+}
+footer a img:hover{
+    height:40px;
+    opacity: 1.0;
 }
 
 
 /* MEDIA QUERY PARA MAIORES QUE 798px*/
 @media only screen and (min-width: 798px){
+	
+	.botao-cabecalho {
+		height: 65px;
+		width: 250px;
+	}
+	
+	.cabecalho h1 {
+		font-size: 60pt;
+	}
+	.cabecalho h5 {
+		font-size: 12pt;
+	}
+	
 	
 }
 
