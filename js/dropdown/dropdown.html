@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DropDown</title>
+
+	<script >
+		
+		function dropdown() {
+			document.getElementById("drop-inner").classList.toggle("show");
+		}
+	</script>
+
+
+
+</head>
+<body>
+	<div class="dropdown">
+		<button onclick="dropdown()" class="drop-button">Entrar</button>
+		<div id="drop-inner" class="dropdown-content">
+			<form>
+				<input type="text" name=""><br>
+				<input type="password" name=""><br>
+				<input type="submit" name=""><br>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
