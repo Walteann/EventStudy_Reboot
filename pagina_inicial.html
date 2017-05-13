@@ -13,6 +13,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    <link rel="stylesheet" href="css/fontes/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Nunito|Open+Sans|Roboto" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,8 +35,28 @@
                     nav.removeClass("menu-fixo");
                 }
             });
+		  
+		  
+		  
+		  
 
         });
+	    
+	    
+	    $(document).ready(function(){
+		    $(".fa-times").click(function(){
+			 $(".sidebar_login").addClass("hide_menu");
+			 $(".toggle_menu").addClass("opacity_one");
+		  });
+		  
+		    $(".toggle_menu").click(function(){
+			 $(".sidebar_login").removeClass("hide_menu");
+			 $(".toggle_menu").removeClass("opacity_one");
+		  });
+	    });
+	    
+	    
+	   
     </script>
 
 
@@ -66,13 +87,39 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="scroll" href="pagina_inicial.html">PAGINA INICIAL</a></li>
-                    <li><a class="scroll" href="#sobreMim">ENTRAR</a></li>
+                    <li><a class="scroll toggle_menu" href="#sobreMim">ENTRAR</a></li>
                     <li><a class="scroll" href="#sobreMim">CADASTRAR</a></li>
 
                 </ul>
             </div>
         </div>
     </nav>
+    
+    <section class="sidebar_login">
+    		<i class="fa fa-times"></i>
+    		
+    		<center>
+    			<a class="boxed-item" href="#"><h3>LOGIN</h3></a>
+    			
+    			<div>
+    				<form action="#" class="form-group">
+    					<label for="Login">Login</label><br>
+    					<input type="text" name="login"><br><br>
+    					<label for="Senha">Senha</label><br>
+    					<input type="password" name="senha"><br><br>
+    					<input  class="btn btn-info" type="submit" value="Entrar">
+    					
+    				</form>
+    				<a href="#"><h6>Esqueceu senha?</h6></a>
+    				<a href="#"><h6>Cadastrar novo usuário</h6></a>
+    				<i class="fa fa-google" aria-hidden="true"></i>
+    				<i class="fa fa-facebook" aria-hidden="true"></i>
+    				<i class="fa fa-twitter" aria-hidden="true"></i>
+    			</div>
+    		</center>
+    </section>
+    
+    
 
     <section class="primeira-sessao">
         <div class="container-fluid">
