@@ -1,18 +1,10 @@
 CREATE DATABASE eventstudy;
 
-CREATE TABLE cadastro(
+CREATE TABLE usuario(
+id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 login VARCHAR(25),
 nome VARCHAR(25),
 senha INT NOT NULL,
 email VARCHAR(100),
-repetir_senha INT NOT NULL,
-CONSTRAINT PK_cadastro PRIMARY KEY (login)
-);
-
-CREATE TABLE perfil (
-id INT NOT NULL,
-nome VARCHAR(25),
-senha INT NOT NULL,
-email VARCHAR(100),
-CONSTRAINT PK_perfil PRIMARY KEY (ID)
+estado VARCHAR(15)
 );
