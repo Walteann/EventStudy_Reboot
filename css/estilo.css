@@ -1,10 +1,8 @@
 body {
-    background: url(imagens/WhatsApp-Hintergrund1.png);
+    margin: 0;
+    padding: 0;
 }
 
-.audiowide {
-    font-family: 'Audiowide';
-}
 
 .panel_default {
     border: 1px solid #FFFFFF;
@@ -15,8 +13,6 @@ body {
 .opacity-nav {
     background-color: rgba(0, 0, 0, 0.7);
 }
-
-
 
 nav a {
     color: #FFFFFF;
@@ -29,14 +25,15 @@ h1#logo {
     font-size: 18pt;
 }
 
-
 .icon-bar {
-    background-color: #FFF; !important;
+    background-color: #FFF;
+    !important;
 }
 
-.navbar .navbar-collapse  {
+.navbar .navbar-collapse {
     text-align: center;
 }
+
 
 /* SCROOL */
 
@@ -44,24 +41,14 @@ h1#logo {
     background-color: #2897d4;
 }
 
-
-
 .menu-fixo h1#logo {
     font-family: 'Bad Script';
     display: inline;
     color: #72bb53;
     font-size: 18pt;
-    
     color: white;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
-    
 }
-
-
-
-
-
-
 
 h2 {
     font-family: 'Audiowide';
@@ -85,66 +72,125 @@ h2 {
     background-image: url("imagens/WhatsApp-Hintergrund1.png")
 }
 
-/* LOGIN SIDEBAR E CADASTRO */
+
+/* LOGIN SIDEBAR  */
 
 .sidebar_login {
-	
-	margin-top: 50px;
-	position:fixed;
-	width: 300px;
-	margin-left: 0px;
-	overflow: hidden;
-	height: 900px;
-	
-	background-color: rgba(6,90,130,0.6);
-	transition: all 0.3s ease-in-out;
-	
+    display: none;
+    margin-top: 50px;
+    position: fixed;
+    width: 300px;
+    margin-left: 0px;
+    overflow: hidden;
+    height: 900px;
+    background-color: rgba(6, 90, 130, 0.8);
+    transition: all 0.3s ease-in-out;
+    z-index: 9000;
 }
 
 .fa-times {
-	
-	right: 10px;
-	top: 10px;
-	opacity: 0.7;
-	cursor: pointer;
-	position: absolute;
-	color: white;
-	transition: all 0.3s ease-in-out;
+    right: 10px;
+    top: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    transition: all 0.3s ease-in-out;
 }
 
 .fa-times:hover {
-	opacity: 1;
-	
+    opacity: 1;
 }
+
 .boxed-item {
-	font-family: "Open Sans",Arial,sans-serif;
-	font-weight: 200;
-	padding: 10px 20px;
-	display: inline-block;
-	border: solid 2px #0da4eb;
-	color: #1ae1ff;
-	box-sizing: border-box;
-	margin-top: 30px;
-	text-align: center;
-	
-	
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 200;
+    padding: 10px 20px;
+    display: inline-block;
+    border: solid 2px #0da4eb;
+    color: #1ae1ff;
+    box-sizing: border-box;
+    margin-top: 30px;
+    text-align: center;
 }
+
 .sidebar_login h6 {
-color: #1ae1ff;;
+    color: #1ae1ff;
 }
 
 .hide_menu {
-	margin-left: -300px;
+    margin-left: -300px;
 }
 
 .opacity_one {
-	opacity: 1;
+    opacity: 1;
 }
+
+.opacity_one2 {
+    opacity: 1;
+}
+
+
+/** CADASTRO **/
+
+.sidebar_cadastro {
+    display: none;
+    margin-top: 50px;
+    position: fixed;
+    width: 300px;
+    margin-left: 0px;
+    overflow: hidden;
+    height: 900px;
+    background-color: rgba(6, 90, 130, 0.8);
+    transition: all 0.6s ease-in-out;
+    z-index: 9000;
+}
+
+.fa-times {
+    right: 10px;
+    top: 10px;
+    opacity: 0.7;
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    transition: all 0.6s ease-in-out;
+}
+
+.fa-times:hover {
+    opacity: 1;
+}
+
+.boxed-item {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 200;
+    padding: 10px 20px;
+    display: inline-block;
+    border: solid 2px #0da4eb;
+    color: #1ae1ff;
+    box-sizing: border-box;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sidebar_cadastro h6 {
+    color: #1ae1ff;
+}
+
+.hide_menu {
+    margin-left: -300px;
+}
+
+.opacity_one {
+    opacity: 1;
+}
+
+
+/** FIM CADASTRO**/
+
 
 /** Primeira sessão */
 
 .primeira-sessao {
-	
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -164,7 +210,6 @@ color: #1ae1ff;;
 /** Eventos index **/
 
 .eventos-index {
-	
     background-color: #eff7fc;
     display: flex;
     flex-direction: column;
@@ -181,10 +226,9 @@ color: #1ae1ff;;
     margin-bottom: 25px;
     display: flex;
     flex-direction: row;
-    justify-content: center center;
+    justify-content: center;
     text-align: center;
     align-items: center;
-    
     width: 300px;
 }
 
@@ -196,7 +240,7 @@ color: #1ae1ff;;
 
 /** FIM eventos index **/
 
-#sobre-nos {
+.sobre-nos {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -207,7 +251,7 @@ color: #1ae1ff;;
     align-items: center;
 }
 
-#sobre-nos h2 {
+.sobre-nos h2 {
     font-family: "Roboto", Arial, sans-serif;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -252,7 +296,7 @@ footer a img:hover {
 /* FIM Footer */
 
 
-/* MEDIA QUERY PARA TABLETE */
+/* MEDIA QUERY PARA TABLET */
 
 @media only screen and (min-width: 768px) {
     .eventos-index {
@@ -262,14 +306,7 @@ footer a img:hover {
     .eventos-index img {
         width: 170px;
     }
-    
-   .eventos-index .buscar {
-  
-    
-    width: 450px;
-}
-
-    
-    
-    
+    .eventos-index .buscar {
+        width: 450px;
+    }
 }

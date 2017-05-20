@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,32 +36,50 @@
                     nav.removeClass("menu-fixo");
                 }
             });
-		  
-		  
-		  
-		  
-
         });
-	    
-	    
-	    $(document).ready(function(){
-		    $(".fa-times").click(function(){
-			 $(".sidebar_login").addClass("hide_menu");
-			 $(".toggle_menu").addClass("opacity_one");
-		  });
-		  
-		    $(".toggle_menu").click(function(){
-			 $(".sidebar_login").removeClass("hide_menu");
-			 $(".toggle_menu").removeClass("opacity_one");
-		  });
-	    });
-	    
-	    
-	   
+
+        $(document).ready(function() {
+            $(".aki1").click(function() {
+                $(".sidebar_login").toggle();
+                $(".toggle_menu").addClass("opacity_one");
+            });
+
+            $(".toggle_menu").click(function() {
+                $(".sidebar_login").toggle();
+                /*$(".sidebar_login").removeClass("hide_menu");*/
+                $(".toggle_menu").removeClass("opacity_one");
+            });
+        });
+
+
+
+        $(document).ready(function() {
+            $(".aki2").click(function() {
+                $(".sidebar_cadastro").toggle();
+                $(".toggle_menu2").addClass("opacity_one2");
+            });
+
+            $(".toggle_menu2").click(function() {
+                $(".sidebar_cadastro").toggle();
+
+                $(".toggle_menu2").removeClass("opacity_one2");
+            });
+        });
+
+        $(document).ready(function() {  
+    
+    $(".fechar_sidebar_se_clicado").mouseup(function(e) { /*Divs/Sections com essa classe serão as afetadas pelo cloque fora das sidebars*/ 
+        
+        var subject = $(".sidebar_login, .sidebar_cadastro"); /*As que serão fechadas*/
+
+        if(e.target.id != subject.attr('id'))
+        {
+            subject.fadeOut(1); /*Tempo em milisegundos para a sidebar desaparecer(esse tempo específico é necessário para criar o efeito)*/
+        }
+     });
+});
+
     </script>
-
-
-
 
 </head>
 
@@ -87,41 +106,92 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="scroll" href="pagina_inicial.html">PAGINA INICIAL</a></li>
-                    <li><a class="scroll toggle_menu" href="#sobreMim">ENTRAR</a></li>
-                    <li><a class="scroll" href="#sobreMim">CADASTRAR</a></li>
+                    <li><a class="scroll toggle_menu toggled" href="#sobreMim">ENTRAR</a></li>
+                    <li><a class="scroll toggle_menu2 toggled" href="#sobreMim">CADASTRAR</a></li>
 
                 </ul>
             </div>
         </div>
     </nav>
-    
-    <section class="sidebar_login">
-    		<i class="fa fa-times"></i>
-    		
-    		<center>
-    			<a class="boxed-item" href="#"><h3>LOGIN</h3></a>
-    			
-    			<div>
-    				<form action="#" class="form-group">
-    					<label for="Login">Login</label><br>
-    					<input type="text" name="login"><br><br>
-    					<label for="Senha">Senha</label><br>
-    					<input type="password" name="senha"><br><br>
-    					<input  class="btn btn-info" type="submit" value="Entrar">
-    					
-    				</form>
-    				<a href="#"><h6>Esqueceu senha?</h6></a>
-    				<a href="#"><h6>Cadastrar novo usuário</h6></a>
-    				<i class="fa fa-google" aria-hidden="true"></i>
-    				<i class="fa fa-facebook" aria-hidden="true"></i>
-    				<i class="fa fa-twitter" aria-hidden="true"></i>
-    			</div>
-    		</center>
-    </section>
-    
-    
 
-    <section class="primeira-sessao">
+
+    <!-- INICIO SIDEBAR LOGIN-->
+    <section class="sidebar_login">
+        <i class="fa fa-times aki1"></i>
+
+        <center>
+            <a class="boxed-item" href="#">
+                <h3>LOGIN</h3>
+            </a>
+
+            <div>
+                <form action="#" class="form-group">
+                    <label for="Login">Login</label><br>
+                    <input type="text" name="login"><br><br>
+                    <label for="Senha">Senha</label><br>
+                    <input type="password" name="senha"><br><br>
+                    <input class="btn btn-info" type="submit" value="Entrar">
+
+                </form>
+                <a href="#">
+                    <h6>Esqueceu senha?</h6>
+                </a>
+                <a href="#">
+                    <h6>Cadastrar novo usuário</h6>
+                </a>
+                <i class="fa fa-google" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </div>
+        </center>
+    </section>
+
+    <!-- FIM SIDEBAR LOGIN -->
+
+    <!-- INICIO SIDEBAR CADASTRO -->
+    <section class="sidebar_cadastro">
+        <i class="fa fa-times aki2"></i>
+
+        <center>
+            <a class="boxed-item" href="#">
+                <h3>CADASTRO</h3>
+            </a>
+
+            <div>
+                <form action="#" class="form-group">
+
+                    <label for="Login">Login</label><br>
+                    <input type="text" name="login"><br><br>
+
+                    <label for="Email">Email</label><br>
+                    <input type="text" name="email"><br><br>
+
+                    <label for="Senha">Senha</label><br>
+                    <input type="password" name="senha"><br><br>
+
+                    <label for="Repita-a-senha">Repita a senha</label><br>
+                    <input type="password" name="senha-repetida"><br><br>
+
+                    <input class="btn btn-info" type="submit" value="Entrar">
+
+                </form>
+                <a href="#">
+                    <h6>Esqueceu senha?</h6>
+                </a>
+                <a href="#">
+                    <h6>Já estou cadastrado</h6>
+                </a>
+                <i class="fa fa-google" aria-hidden="true"></i>
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+            </div>
+        </center>
+    </section>
+
+    <!-- FIM SIDEBAR CADASTRO -->
+
+
+    <section class="primeira-sessao fechar_sidebar_se_clicado">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12 col-md-12">
@@ -132,8 +202,8 @@
     </section>
 
 
-    <section class="eventos-index">
-       
+    <section class="eventos-index fechar_sidebar_se_clicado">
+
         <div class="buscar col-lg-12 col-md-12">
             <div class="input-group">
                 <input type="text" class="form-control input-buscar" placeholder="Procurar evento">
@@ -143,32 +213,32 @@
             </div>
             <!-- /input-group -->
         </div>
-        
-        
+
+
         <div class="col-lg-12 col-md-12">
-        <img src="imagens/eventos/campusparty.png">
-        <img src="imagens/eventos/hackthon.jpg">
-        <img src="imagens/eventos/flisol.png">
-        <img src="imagens/eventos/foto-2-1.png">
+            <img src="imagens/eventos/campusparty.png">
+            <img src="imagens/eventos/hackthon.jpg">
+            <img src="imagens/eventos/flisol.png">
+            <img src="imagens/eventos/foto-2-1.png">
 
         </div>
     </section>
 
-    <section id="sobre-nos">
+    <section class="sobre-nos fechar_sidebar_se_clicado">
         <div>
             <h2>Sobre Nós</h2>
-            <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac mi purus. Nulla nec lacus pellentesque, dapibus lectus vitae, sagittis odio. Integer pellentesque dignissim congue. Donec tempus aliquam eleifend. Aliquam vitae purus nibh. In quis sem id velit scelerisque malesuada nec non dolor. Praesent varius vitae mi a luctus. Donec tempus odio nisl, et congue urna elementum vitae. Sed purus metus, convallis vitae malesuada sed, dictum eu velit.</p>
+            <p>Orem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac mi purus. Nulla nec lacus pellentesque, dapibus lectus vitae, sagittis odio. Integer pellentesque dignissim congue. Donec tempus aliquam eleifend. Aliquam vitae purus nibh. In quis sem id velit scelerisque malesuada nec non dolor. Praesent varius vitae mi a luctus. Donec tempus odio nisl, et congue urna elementum vitae. Sed purus metus, convallis vitae malesuada sed, dictum eu velit.</p>
         </div>
     </section>
 
     <footer>
-        <div class="redesocial">
+        <div class="redesocial fechar_sidebar_se_clicado">
             <a href="#" id="facebook"><img src="imagens/icones/facebook_dark.png"></a>
             <a href="#" id="google"><img src="imagens/icones/google_dark.png"></a>
             <a href="#" id="in"><img src="imagens/icones/in_dark.png"></a>
             <a href="#" id="twitter"><img src="imagens/icones/twitter_dark.png"></a>
         </div>
-        <p>&copy Todos os direitos reservados</p>
+        <p>&copy; Todos os direitos reservados</p>
     </footer>
 
 
@@ -181,4 +251,5 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
+
 </html>
