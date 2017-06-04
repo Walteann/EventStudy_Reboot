@@ -270,27 +270,32 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
 
 
         <section class="eventos-index fechar_sidebar_se_clicado">
-
-            <div class="buscar col-lg-12 col-md-12 ">
-                <div class="input-group">
-                    <input type="text" class="form-control input-buscar" placeholder="Procurar evento">
-                    <span class="input-group-btn">
-        <button class="btn btn-default" type="button">BUSCAR</button>
-      </span>
+            <div class="container">
+                <div class="row">
+                    <div class="buscar col-lg-12 col-md-12 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-4 col-sm-offset-2 col-xs-offset-2">
+                        <div class="input-group">
+                            <input type="text" class="form-control input-buscar" placeholder="Procurar evento">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">BUSCAR</button>
+                            </span>
+                        </div>
+                        <!-- /input-group -->
+                    </div>
                 </div>
-                <!-- /input-group -->
-            </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
+                       <!--
+                        <img src="imagens/eventos/campusparty.png">
+                        <img src="imagens/eventos/hackthon.jpg">
+                        <img src="imagens/eventos/flisol.png">
+                        <img src="imagens/eventos/foto-2-1.png">-->
+                        
+                        <!--<iframe width="100%" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=218302982680021663941.00049fcd9cf93276f540e&amp;ll=37.7737,-122.43782&amp;spn=0.067844,0.098877&amp;z=12&amp;output=embed"> </iframe>-->
 
+                        <span style="color: red;">AQUI FICARIAM TODOS OS EVENTOS, PODENDO PESQUISAR E FILTRAR PARA ENCONTRAR UM EVENTO ESPECÍFICO</span> 
 
-            <div class="col-lg-12 col-md-12">
-               <!--
-                <img src="imagens/eventos/campusparty.png">
-                <img src="imagens/eventos/hackthon.jpg">
-                <img src="imagens/eventos/flisol.png">
-                <img src="imagens/eventos/foto-2-1.png">-->
-                
-                <iframe width="887" height="298" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=218302982680021663941.00049fcd9cf93276f540e&amp;ll=37.7737,-122.43782&amp;spn=0.067844,0.098877&amp;z=12&amp;output=embed"> </iframe>
-
+                    </div>
+                </div>
             </div>
         </section>
 
