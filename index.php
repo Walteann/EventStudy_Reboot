@@ -1,0 +1,167 @@
+<?php
+session_start();
+
+if(isset($_SESSION['login'])){
+    header('Location: home.php');
+}
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>EventStudy - Agende seus eventos</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/pagina_inicial.css" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Bad+Script|Nunito|Open+Sans|Roboto" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <header class="cabecalho">
+    	<div class="container-fluid">
+    		<div class="row">
+    			<h1>EventStudy</h1>
+    			<h5>Agende seus Eventos</h5>
+    			<a href="pagina_inicial.php"><button class="btn btn-success botao-cabecalho">Procurar Eventos</button></a>
+    		</div>
+    	</div>
+    </header>
+
+    <section class="oferecemos">
+    	<div class="container-fluid">
+    		<div class="row">
+    			<div class="col-lg-12 col-md-12">
+    				<h1>o que nós oferecemos</h1>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, vitae, explicabo. Numquam cupiditate, officiis aliquid nobis et rem itaque expedita placeat eos autem nostrum quos quod hic ea iure quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi maiores recusandae dolores voluptatum quasi iure libero, adipisci. Dolore provident modi et, facere eius culpa quibusdam magni fugiat autem totam nemo! </p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+
+    <section class="motivos">
+    	<div class="container-fluid">
+    		<div class="row">
+    			<div class="EventMotivo">
+				<div class="col-lg-2 col-md-2 EventCol">
+
+					<div class="MotivosImagens">
+						<h3>Procure os Melhores Eventos</h3>
+						<div class="imgMotivo"><img src="imagens/motivos/295947.png" alt="olho"></div>
+						<p>Lorem ipsum dolor sit amet, conit. Ducimus harum,ptates quis, maxime. Odit, fugit eius.</p>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2 EventCol ">
+					<div class="MotivosImagens">
+						<h3>Crie você mesmo seu evento</h3>
+						<div class="imgMotivo"><img src="imagens/motivos/296403.png" alt="olho"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus ha fugit eius.</p>
+					</div>
+
+				</div>
+
+				<div class="col-lg-2 col-md-2 EventCol ">
+					<div class="MotivosImagens">
+						<h3>Tenha todo controle na sua mão</h3>
+						<div class="imgMotivo"><img src="imagens/motivos/296336.png" alt="olho"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harime. Odit, fugit eius.</p>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2 EventCol">
+					<div class="MotivosImagens">
+						<h3>Divulgamos pra você</h3>
+						<div class="imgMotivo"><img src="imagens/motivos/283903.png" alt="olho"></div>
+						<p>Lorem ipsum dolor sit amet, colit. Ducimus harum,ptates quis, maxime. Odit, fugit eius.</p>
+					</div>
+
+				</div>
+				<div class="col-lg-2 col-md-2 EventCol">
+
+					<div class="MotivosImagens">
+						<h3>Ganhe certificados</h3>
+						<div class="imgMotivo"><img src="imagens/motivos/296339.png" alt="olho"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum,ptate. Odit, fugit eius.</p>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-2 EventCol">
+					<div class="MotivosImagens">
+						<h3>Guardamos pra você</h3>
+						<div class="imgMotivo"><img src="imagens/motivos/297538.png" alt="olho"></div>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus harum,ptate Odit, fugit eius.</p>
+					</div>
+				</div>
+
+    			</div>	<!-- fim teste -->
+
+    		</div>
+    	</div>
+    </section>
+
+
+    <!-- PRÉ RODAPE -->
+
+    <section class="pre-rodape">
+    	<div class="container-fluid">
+    		<div class="row">
+    			<div class="col-lg-4 col-md-4 pRodape">
+
+    				<h4><a href="#">Criar um Evento</a></h4>
+    				<h4><a href="#">Encontrar um Evento</a></h4>
+    				<h4><a href="#">Entrar</a></h4>
+
+    			</div>
+
+    			<div class="col-lg-4 col-md-4 pRodape">
+
+    				<h4><a href="#">Planejamento</a></h4>
+    				<h4><a href="#">Planos e preços</a></h4>
+    				<h4><a href="#">Serviços</a></h4>
+    			</div>
+
+    			<div class="col-lg-4 col-md-4 pRodape">
+    				<h4><a href="#">Contatos</a></h4>
+    				<h4><a href="#">Fale Conosco</a></h4>
+    				<h4><a href="#">Serviços</a></h4>
+    				<h4><a href="#">Termos de Uso</a></h4>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <footer class="rodape">
+    	<div class="container-fluid">
+    		<div class="row">
+    			<div class="col-lg-12 col-md-12">
+    				 <div class="redesocial">
+             			 <a href="#" id="facebook"><img src="imagens/icones/facebook_dark.png"></a>
+            			 <a href="#"id="google" ><img src="imagens/icones/google_dark.png"></a>
+            			 <a href="#"  id="in"><img src="imagens/icones/in_dark.png"></a>
+             			 <a href="#" id="twitter"><img src="imagens/icones/twitter_dark.png"></a>
+         			 </div>
+    				<h6>&copy COPYRIGHT 2017 - EventStudy</h6>
+    			</div>
+    		</div>
+    	</div>
+    </footer>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

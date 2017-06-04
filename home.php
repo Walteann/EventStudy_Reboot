@@ -1,5 +1,9 @@
 <?php
+session_start();
 
+if(!isset($_SESSION['login'])){
+	header('Location: pagina_inicial.php?erro=1');
+}
 // ### Configuração inicial ###
 require_once 'teste/_app/config.php';
 
@@ -112,7 +116,7 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
 
         <!-- MUDEI AQUI  -->
 				<li style="float:right" >
-            <a href="?sair=true" >
+            <a href="sair.php" >
                 <i class="fa fa-sign-out icones_menus" aria-hidden="true"></i>
             </a>
         </li>
@@ -137,7 +141,7 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
 				<div class="row">
 					<div class="col-lg-12 col-md-12">
 
-            <h1>Teste</h1>
+            <h1>Home</h1>
 						<?php
                    echo $profile['email'];
 

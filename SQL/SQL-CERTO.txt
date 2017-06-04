@@ -2,9 +2,8 @@ CREATE DATABASE eventstudy;
 
 CREATE TABLE usuario(
 id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-login VARCHAR(25),
-nome VARCHAR(25),
-senha INT NOT NULL,
-email VARCHAR(100),
-estado VARCHAR(15)
+login VARCHAR(25) not null,
+senha VARCHAR(50) NOT NULL,
+email VARCHAR(100) not null
+
 );
