@@ -19,7 +19,7 @@ body {
 	background-size: cover;
 	background-position: right;
 	text-align: center;
-	
+
 }
 
 .cabecalho h1 {
@@ -27,7 +27,7 @@ body {
 	font-family: "Bad Script",Arial,sans-serif;
 	font-size: 30pt;
 	margin: 0 auto;
-	margin-top: 200px	
+	margin-top: 200px
 }
 
 .cabecalho h5 {
@@ -59,11 +59,11 @@ body {
 }
 
 .teste {
-	
+
 	display: flex;
 	flex-direction:column;
 	justify-content: center;
-	
+
 }
 
 .motivos {
@@ -71,8 +71,8 @@ body {
 	background-color: #f96232;
 	padding-top: 50px;
 	padding-bottom: 50px;
-	
-	
+
+
 }
 
 .EventMotivo {
@@ -93,7 +93,7 @@ body {
 	height: 60px;
 	margin: 15px 0 15px 0;
 	margin-top: 15px;
-	
+
 }
 
 .imgMotivo {
@@ -110,7 +110,7 @@ body {
 	font-weight: 700;
 	font-size: 12pt;
 	margin-bottom: 2px;
-	
+
 }
 
 .EventCol p {
@@ -127,7 +127,7 @@ body {
 	padding-bottom: 10px;
 	background-color: #464646;
 	text-align: center;
-		
+
 }
 
 .pRodape {
@@ -144,7 +144,7 @@ body {
 }
 
 .pre-rodape a:hover {
-	
+
 	color: #43d3e8;
 }
 
@@ -178,60 +178,47 @@ footer a img {
     opacity: 0.5;
     transition: 0.5s;
     margin:2px;
-    
+
 }
 footer a img:hover{
     height:40px;
     opacity: 1.0;
 }
 
+/* Botão google sign in */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,600,700,400);
+.g-signin2,
+.g-signin2 .abcRioButton {
+	display: block;
+	data-width: 50px;
+	data-height: 50px;
+	border-radius: 50px;
+	margin-top: 10px;
+padding: -2px;
+
+}
 
 /* MEDIA QUERY PARA MAIORES QUE 798px*/
 @media only screen and (min-width: 798px){
-	
+
 	.botao-cabecalho {
 		height: 65px;
 		width: 250px;
 	}
-	
+
 	.cabecalho h1 {
 		font-size: 60pt;
 	}
 	.cabecalho h5 {
 		font-size: 12pt;
 	}
-	
-	
+
+
 }
 
 
 /* MEDIA QUERY PARA MAIORES QUE 1000px */
 
 @media only screen and (min-width: 1000px){
-	
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

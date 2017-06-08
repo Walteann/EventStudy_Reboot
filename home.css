@@ -308,11 +308,28 @@ div.googl i:hover {
 	align-items: center;
 	width: 300px;
 }
-
-.eventos-index img {
-	width: 200px;
-	margin: 10px;
-}
+		
+		.meusEventos {
+			
+			width: auto;
+			height: auto;
+			display:flex;
+			flex-direction: column;
+			justify-content: space-between;
+			
+			
+			
+			border: 1px solid red;
+		}
+		
+		.listagemEventos {
+			position: relative;
+			height: auto;
+			width: 450px;
+			border: 1px solid blue;
+			margin:15px;
+			
+		}		
 
 
 /** FIM eventos index **/
@@ -387,3 +404,5 @@ footer a img:hover {
 		width: 450px;
 	}
 }
+
+		

@@ -1,10 +1,4 @@
 <?php
-session_start();
-
-if(isset($_SESSION['login'])){
-    header('Location: pagina_inicial.php?erro=1');
-}
-
 //Mudanças - Solon - Cadastro e Autenticação de Usuário
 /*====LOGIN DO USUÁRIO*/
 $erro = isset($_GET['erro']) ? $_GET['erro'] : 0;
@@ -33,7 +27,7 @@ if (isset($logoff) && $logoff == 'true'): // verifica  se é verdadeiro
 endif;
 
 // ### Fazendo o login do usuário
-$loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permissions); //Redirecionando pra página do app
+$loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/pagina_inicial.php', $permissions); //Redirecionando pra página do app
  ?>
 
     <!DOCTYPE html>
@@ -43,6 +37,9 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="google-signin-scope" content="profile email">
+        <meta name="google-signin-client_id" content="664587044292-avitmflmcbh4tgk4l17l71hvl9un0ski.apps.googleusercontent.com">
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>EventStudy</title>
 
@@ -117,9 +114,21 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
             });
 
         </script>
+<!-- ############### BOTÃO DO GOOGLE ##################### -->
+        <style type="text/css">
+        @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,600,700,400);
+        .g-signin2,
+        .g-signin2 .abcRioButton {
+          display: block;
+          data-width: 50px;
+          data-height: 50px;
+          border-radius: 50px;
+          margin-top: 10px;
+        padding: -2px;
 
-
-
+        }
+        </style>
+<!--############################################################ -->
     </head>
 
     <body>
@@ -158,7 +167,7 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
                     </form>
                     <?php
                         if($erro == 1){
-            
+
                             echo '<font color="yellow">--Usuário e ou senha inválido(s)-- Mudar cor</font>';
                         }
                     ?>
@@ -170,9 +179,9 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
                         </a>
 
                         <div class="redeSocial">
-                            <div class="googl">
-                                <i class="fa fa-google" aria-hidden="true"></i>
-                            </div>
+              						<div class="googl">
+              							  <div class="g-signin2" data-onsuccess="onSignIn"  data-theme="dark" data-width="50" data-height="50" data-longtitle="false" data-lang="pt-BR" data-redirecturi="postmessage"></div>
+              						</div>
                             <div class="face">
                                 <a href="<?= $loginUrl?>"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                             </div>
@@ -252,7 +261,8 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
                 <div class="row">
                     <div class="col-lg-12 col-md-12">
                         <a href="home.php">Se logado, va -> </a>
-                        <h1>Pagina Inicial</h1>
+                        <h1>Teste</h1>
+
                         <?php
                    echo $profile['email'];
 
@@ -270,32 +280,37 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
 
 
         <section class="eventos-index fechar_sidebar_se_clicado">
-            <div class="container">
-                <div class="row">
-                    <div class="buscar col-lg-12 col-md-12 col-sm-12 col-xs-12 col-md-offset-2 col-lg-offset-4 col-sm-offset-2 col-xs-offset-2">
-                        <div class="input-group">
-                            <input type="text" class="form-control input-buscar" placeholder="Procurar evento">
-                            <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">BUSCAR</button>
-                            </span>
-                        </div>
-                        <!-- /input-group -->
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
-                       <!--
-                        <img src="imagens/eventos/campusparty.png">
-                        <img src="imagens/eventos/hackthon.jpg">
-                        <img src="imagens/eventos/flisol.png">
-                        <img src="imagens/eventos/foto-2-1.png">-->
-                        
-                        <!--<iframe width="100%" height="320" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=218302982680021663941.00049fcd9cf93276f540e&amp;ll=37.7737,-122.43782&amp;spn=0.067844,0.098877&amp;z=12&amp;output=embed"> </iframe>-->
 
-                        <span style="color: red;">AQUI FICARIAM TODOS OS EVENTOS, PODENDO PESQUISAR E FILTRAR PARA ENCONTRAR UM EVENTO ESPECÍFICO</span> 
-
-                    </div>
+            <div class="buscar col-lg-12 col-md-12 ">
+               
+               
+               <!-- ####################  ALTEREI AQUI ######################################### -->
+                      <form class="input-group" action="http://localhost/eventstudy/home.php/"  method="post">
+                        <input type="text" name="aqui" class="form-control input-buscar" placeholder="Procure um evento">
+                        <input class="btn btn-default" type="submit" value="buscar">
+                      </form>
+                <!-- ##################################### AQUI #################-->
+               <!--
+                <div class="input-group" action="http://localhost/eventstudy/home.php/" method="post" >
+                    <input  type="text" class="form-control input-buscar" placeholder="Procurar evento">
+                    <span class="input-group-btn">
+        	<input class="btn btn-default" type="sutmit" value="buscar" size="5">
+      </span>
                 </div>
+                <!-- /input-group -->
+		  
+            </div>
+
+
+            <div class="col-lg-12 col-md-12">
+               <!--
+                <img src="imagens/eventos/campusparty.png">
+                <img src="imagens/eventos/hackthon.jpg">
+                <img src="imagens/eventos/flisol.png">
+                <img src="imagens/eventos/foto-2-1.png">-->
+
+               
+
             </div>
         </section>
 
@@ -317,7 +332,18 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
         </footer>
 
 
+        <script>
+        function onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+          console.log('Name: ' + profile.getName());
+          console.log('Image URL: ' + profile.getImageUrl());
+          console.log('Email: ' + profile.getEmail());
+          var id_token = googleUser.getAuthResponse().id_token;
+          console.log("ID Token: " + id_token);
+        }
 
+        </script>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
