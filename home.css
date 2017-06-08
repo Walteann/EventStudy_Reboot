@@ -189,7 +189,7 @@ li {
 	width: 300px;
 }
 		.osEventos {
-			border: 1px solid blue;
+			
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
@@ -197,7 +197,7 @@ li {
 		}
 		
 		.listarEventos {
-			border: 1px solid red;
+			border: 1px dashed black;
 			height: auto;
 			width: 320px;
 			margin: 10px;

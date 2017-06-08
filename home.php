@@ -145,8 +145,8 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
 			<div class="buscar col-lg-12 col-md-12 ">
 				 <!-- ####################  ALTEREI AQUI ######################################### -->
                       <form class="input-group" action="http://localhost/eventstudy/home.php/"  method="post">
-                        <input type="text" name="aqui" class="form-control input-buscar" placeholder="Digite o evento">
-                        <input class="btn btn-default" type="submit" value="buscar">
+                        <input type="text" name="aqui" class="form-control input-buscar" placeholder="Digite o evento" >
+                        <input class="btn btn-default" type="submit" value="Buscar" >
                       </form>
                 <!-- ##################################### AQUI #################-->
 			</div>
@@ -158,7 +158,9 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
 			
 
 
-<!-- ########################## ALTEREI AQUI ########################################### --><h1>Teste</h1>
+<!-- ########################## ALTEREI AQUI ########################################### -->
+<?php echo "<h5>Eventos com palavra-chave: $id</h5>"?>
+
 				<div class="osEventos">
          
             <?php
@@ -175,7 +177,7 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
               <strong>CEP do evento :</strong> <?=$key['place']['location'] ['zip']?><br>
               <strong>Descrição do evento :</strong>  <?=$key['description']?> <br> <br>
 			  
-              <button onclick="location.href = 'http://www.facebook.com/<?= $key["id"]?>';" class="btn btn-success" >INSCREVER-SE</button>
+              <button onclick="window.open('http://www.facebook.com/<?= $key["id"]?>','_blank');" class="btn btn-success" >INSCREVER-SE</button>
 			</div>
           
             <?php }?>
