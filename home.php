@@ -104,18 +104,19 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
 
 		<div id="minhaNavbar" class="minhaNav fechar_sidebar_se_clicado">
 			<ul>
-				<li id="logo"><a href="#">EventStudy</a></li>
+				<li id="logo"><a href="../index.html">EventStudy</a></li>
 
         <!-- MUDEI AQUI    -->
 				<li style="float:right"  class="scroll toggle_menu2 toggled ">
-            <a href="?sair=true" >
+            <a class="sair" href="?sair=true" >
                 <i class="fa fa-sign-out icones_menus" aria-hidden="true"></i>
             </a>
         </li>
 
 
 					<li style="float:right"  href="#"><i class="fa fa-cog icones_menus" aria-hidden="true"></i></li>
-					<li style="float:right" class="" href="pagina_inicial.html"><i class="fa fa-home icones_menus" aria-hidden="true"></i>
+
+					<li style="float:right" class="" href="../index.html"><i class="fa fa-home icones_menus" aria-hidden="true"></i>
 				</li>
 			</ul>
 		</div>
@@ -155,7 +156,9 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
 			
 					
 			
-				<!-- ########################## ALTEREI AQUI ########################################### --><h1>Teste</h1>
+
+
+<!-- ########################## ALTEREI AQUI ########################################### --><h1>Teste</h1>
 				<div class="osEventos">
          
             <?php
@@ -165,14 +168,15 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permiss
 			<div class="listarEventos">
              
               <strong>Nome do evento :</strong>  <?= $key['name'] ?> <br>
+              <strong>ID do evento :</strong>  <?= $key['id'] ?> <br>
               <strong>Lugar do evento :</strong> <?= $key['place']['name']?><br>
               <strong>Cidade do evento :</strong> <?= $key['place']['location'] ['city']?><br>
               <strong>Rua do evento :</strong> <?=$key['place']['location'] ['street']?><br>
               <strong>CEP do evento :</strong> <?=$key['place']['location'] ['zip']?><br>
               <strong>Descrição do evento :</strong>  <?=$key['description']?> <br> <br>
-
-              <button href='<?php $key["place"]["url"]?>' class="btn btn-success">INSCREVER-SE</button>
-            </div>
+			  
+              <button onclick="location.href = 'http://www.facebook.com/<?= $key["id"]?>';" class="btn btn-success" >INSCREVER-SE</button>
+			</div>
           
             <?php }?>
 <!-- ############################# até aqui ################################### -->

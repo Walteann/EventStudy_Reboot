@@ -5,6 +5,7 @@ body {
 	background-attachment: fixed;	
 	background-position: center center;
 	background-size: cover;
+	overflow-x: none; 
 }
 
 .panel_default {
@@ -85,6 +86,10 @@ li {
 	color: #43d3e8;
 	font-size: 22pt;
 	text-shadow: 1px 1px 2px white, 0 0 2px white, 0 0 2px white;
+}
+
+.minhaNav ul li a.sair {
+	color: white;
 }
 
 .icones_menus:visited {

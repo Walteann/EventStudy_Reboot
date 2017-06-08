@@ -1,29 +1,3 @@
-<?php
-
-// ### Configuração inicial ###
-require_once 'teste/_app/config.php';
-
-
-$id = $_POST['aqui'];
-
-
-    // type can be user, group, page or event
-    $search = $fb->get('/search?q='.$id.'&type=event');
-    $search = $search->getGraphEdge()->asArray();
-
-// Variavel Login com todas as classes
-$Login = $fb->getRedirectLoginHelper(); //  Instanciando a Helper de Login.
-$permissions = ['email']; // Permissão pra obter o email do usuário.
-
-$logoff = filter_input(INPUT_GET, 'sair', FILTER_DEFAULT); // Caso o usuário deseje sair.
-if (isset($logoff) && $logoff == 'true'): // verifica  se é verdadeiro
-    session_destroy(); // Sai da sessão
-    header("Location: ./"); // volta pra página inicial.
-endif;
-
-// ### Fazendo o login do usuário
-$loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permissions); //Redirecionando pra página do app
- ?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
