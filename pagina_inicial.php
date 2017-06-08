@@ -303,11 +303,11 @@ $loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/pagina_inicial.php'
 
 
             <div class="col-lg-12 col-md-12">
-               <!--
+              
                 <img src="imagens/eventos/campusparty.png">
                 <img src="imagens/eventos/hackthon.jpg">
                 <img src="imagens/eventos/flisol.png">
-                <img src="imagens/eventos/foto-2-1.png">-->
+                <img src="imagens/eventos/foto-2-1.png">
 
                
 

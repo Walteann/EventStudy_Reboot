@@ -1,6 +1,10 @@
 body {
 	margin: 0;
 	padding: 0;
+	background-image: url("imagens/Palestra_ibc.jpg");
+	background-attachment: fixed;	
+	background-position: center center;
+	background-size: cover;
 }
 
 .panel_default {
@@ -83,6 +87,11 @@ li {
 	text-shadow: 1px 1px 2px white, 0 0 2px white, 0 0 2px white;
 }
 
+.icones_menus:visited {
+	color: white;
+	
+}
+
 
 /* FIM NAVEGAÇÃO */
 
@@ -112,156 +121,6 @@ li {
 }
 
 
-/* LOGIN SIDEBAR  */
-
-.sidebar_login {
-	
-	display: none;
-	margin-top: 50px;
-	position: fixed;
-	width: 300px;
-	margin-left: 0px;
-	overflow: hidden;
-	height: 900px;
-	background-color: rgba(6, 90, 130, 0.8);
-	transition: all 0.3s ease-in-out;
-	z-index: 9000;
-}
-
-.fa-times {
-	right: 10px;
-	top: 10px;
-	opacity: 0.7;
-	cursor: pointer;
-	position: absolute;
-	color: white;
-	transition: all 0.3s ease-in-out;
-}
-
-.fa-times:hover {
-	opacity: 1;
-}
-
-.boxed-item {
-	font-family: "Open Sans", Arial, sans-serif;
-	font-weight: 200;
-	padding: 2px 4px;
-	display: inline-block;
-	color: #1ae1ff;
-	margin-top: 10px;
-	text-align: center;
-}
-
-.sidebar_login h6,
-label {
-	font-family: "Roboto", Arial, sans-serif;
-	color: #1ae1ff;
-}
-
-.hide_menu {
-	margin-left: -300px;
-}
-
-.opacity_one {
-	opacity: 1;
-}
-
-.opacity_one2 {
-	opacity: 1;
-}
-
-
-/** CADASTRO **/
-
-.sidebar_cadastro {
-
-	overflow-y:scroll;
-	display: none;
-	margin-top: 50px;
-	position: fixed;
-	width: 300px;
-	height: 100%;
-	margin-left: 0px;
-	overflow: hidden;
-	height: 900px;
-	background-color: rgba(6, 90, 130, 0.8);
-	transition: all 0.6s ease-in-out;
-	z-index: 9000;
-}
-
-.fa-times {
-	right: 10px;
-	top: 10px;
-	opacity: 0.7;
-	cursor: pointer;
-	position: absolute;
-	color: white;
-	transition: all 0.6s ease-in-out;
-}
-
-.fa-times:hover {
-	opacity: 1;
-}
-
-.scrollCenter{
-	overflow-y:show;
-}
-
-
-.sidebar_cadastro h6 {
-	color: #1ae1ff;
-}
-
-.hide_menu {
-	margin-left: -300px;
-}
-
-.opacity_one {
-	opacity: 1;
-}
-
-
-/*REDESOCIAL*/
-
-.redeSocial {
-	width: 150px;
-	height: 50px;
-	font-size: 25pt;
-	text-align: center;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-.redeSocial i {
-	margin: 10px;
-}
-
-div.face i {
-	padding: 10px;
-	width: 50px;
-	height: 50px;
-	background-color: #4b67a1;
-	color: white;
-	border-radius: 50px;
-}
-
-div.googl i {
-	padding: 10px;
-	width: 50px;
-	height: 50px;
-	background-color: #db4936;
-	color: white;
-	border-radius: 50px;
-}
-
-div.face i:hover,
-div.googl i:hover {
-	opacity: 0.8;
-}
-
-
-/** FIM CADASTRO**/
 
 
 /** Primeira sessão */
@@ -273,12 +132,28 @@ div.googl i:hover {
 	text-align: center;
 	align-items: center;
 	width: 100%;
-	background-image: url("../imagens/Palestra_ibc.jpg");
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
-	height: 600px;
+	color: whites;
+	height: 300px;
 }
+
+
+.cabecalho h1 {
+	width: 250px;
+	font-family: "Bad Script",Arial,sans-serif;
+	font-size: 40pt;
+	margin: 0 auto;
+	margin-top: 200px
+	color: white;
+	text-shadow: 1px 1px 2px black, 0 0 25px white, 0 0 5px darkblue;
+}
+
+.cabecalho h5 {
+	font-family: "Open Sans",Arial,sans-serif;
+	font-size: 12pt;
+	margin: 0;
+	color: black;
+}
+
 
 
 /* Fim primeira sessão **/
@@ -287,7 +162,7 @@ div.googl i:hover {
 /** Eventos index **/
 
 .eventos-index {
-	background-color: #eff7fc;
+	background-color: rgba(239,247,252,0.5);
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -308,29 +183,21 @@ div.googl i:hover {
 	align-items: center;
 	width: 300px;
 }
-		
-		.meusEventos {
-			
-			width: auto;
-			height: auto;
-			display:flex;
-			flex-direction: column;
-			justify-content: space-between;
-			
-			
-			
-			border: 1px solid red;
+		.osEventos {
+			border: 1px solid blue;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			flex-wrap: wrap;
 		}
 		
-		.listagemEventos {
-			position: relative;
+		.listarEventos {
+			border: 1px solid red;
 			height: auto;
-			width: 450px;
-			border: 1px solid blue;
-			margin:15px;
-			
-		}		
-
+			width: 320px;
+			margin: 10px;
+			padding: 5px;
+		}
 
 /** FIM eventos index **/
 
@@ -403,6 +270,11 @@ footer a img:hover {
 	.eventos-index .buscar {
 		width: 450px;
 	}
+
+	.listarEventos {
+			
+			width: 450px;
+		}
 }
 
 		

@@ -1,3 +1,30 @@
+<?php
+
+// ### Configuração inicial ###
+require_once 'teste/_app/config.php';
+
+
+$id = $_POST['aqui'];
+
+
+    // type can be user, group, page or event
+    $search = $fb->get('/search?q='.$id.'&type=event');
+    $search = $search->getGraphEdge()->asArray();
+
+// Variavel Login com todas as classes
+$Login = $fb->getRedirectLoginHelper(); //  Instanciando a Helper de Login.
+$permissions = ['email']; // Permissão pra obter o email do usuário.
+
+$logoff = filter_input(INPUT_GET, 'sair', FILTER_DEFAULT); // Caso o usuário deseje sair.
+if (isset($logoff) && $logoff == 'true'): // verifica  se é verdadeiro
+    session_destroy(); // Sai da sessão
+    header("Location: ./"); // volta pra página inicial.
+endif;
+
+// ### Fazendo o login do usuário
+$loginUrl = $Login->getLoginUrl('http://localhost/eventstudy/home.php', $permissions); //Redirecionando pra página do app
+ ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -36,7 +63,7 @@
     	<div class="container-fluid">
     		<div class="row">
     			<div class="col-lg-12 col-md-12">
-    				<h1>o que nós oferecemos</h1>
+    				<h1>O QUE NÓS OFERECEMOS</h1>
     				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, vitae, explicabo. Numquam cupiditate, officiis aliquid nobis et rem itaque expedita placeat eos autem nostrum quos quod hic ea iure quisquam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi maiores recusandae dolores voluptatum quasi iure libero, adipisci. Dolore provident modi et, facere eius culpa quibusdam magni fugiat autem totam nemo! </p>
     			</div>
     		</div>
